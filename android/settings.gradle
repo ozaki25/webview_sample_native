@@ -1,0 +1,3 @@
+rootProject.name = 'webview_camera_sample_native'
+
+include ':app'
