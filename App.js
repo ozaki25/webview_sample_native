@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, WebView } from 'react-native';
+import { Platform, StyleSheet, View, WebView } from 'react-native';
+import Camera from 'react-native-camera';
 
 const uri = Platform.OS === 'ios' ? 'http://localhost:3000' : 'http://10.0.2.2:3000';
 
@@ -7,7 +8,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  camera: {
+    flex: 1,
+  },
 });
+
 const jsCode = `
 var inputFile = document.getElementById('input-file');
 inputFile.setAttribute('disabled', true);
@@ -33,15 +38,11 @@ export default class App extends Component {
 
   showCamera = () => this.setState({ cameraView: true });
 
-  showCamera = () => this.setState({ cameraView: true });
-
   render() {
     return (
       <View style={styles.container}>
         {this.state.cameraView ? (
-          <View style={{ flex: 1, backgroundColor: 'green' }}>
-            <Text>カメラ画面</Text>
-          </View>
+          <Camera style={styles.camera} />
         ) : (
           <WebView
             source={{ uri }}
