@@ -1,6 +1,7 @@
 import React from 'react';
 import { Platform, WebView } from 'react-native';
 
+// 実機の時はネットワークのIPを設定する
 const uri = Platform.OS === 'ios' ? 'http://localhost:3000' : 'http://10.0.2.2:3000';
 
 const injectedJavaScript = `

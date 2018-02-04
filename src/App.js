@@ -10,16 +10,14 @@ export default class App extends Component {
   }
 
   onMessage = (e) => {
-    const { data } = e.nativeEvent;
-    if (data === 'ShowCamera') {
-      this.showCamera();
-    }
+    if (e.nativeEvent.data === 'ShowCamera') this.showCamera();
   };
 
   onPressCapture = async () => {
     const capture = await this.camera.capture();
     const src = `"data:image/png;base64,${capture.data}"`;
-    this.webview.injectJavaScript(`document.body.dispatchEvent(new CustomEvent('uploaded', { detail: { src: ${src} } }))`);
+    const jscode = `document.body.dispatchEvent(new CustomEvent('uploaded', { detail: { src: ${src} } }))`;
+    this.webview.injectJavaScript(jscode);
     this.setState({ cameraView: false });
   };
 
