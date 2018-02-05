@@ -13,7 +13,7 @@ react-native run-android
 
 ## 関連リポジトリ
 
-- スマホアプリ
-  - https://github.com/ozaki25/webview_sample_native
 - Webアプリ
   - https://github.com/ozaki25/webview_sample_web
+- API
+  - https://github.com/ozaki25/webview_sample_api
