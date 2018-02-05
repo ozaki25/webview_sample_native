@@ -16,4 +16,4 @@ react-native run-android
 - スマホアプリ
   - https://github.com/ozaki25/webview_sample_native
 - Webアプリ
-  - https://github.com/ozaki25/webview_sample_web
+  - https://github.com/ozaki25/webview_sample_web
