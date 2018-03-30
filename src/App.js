@@ -10,6 +10,7 @@ export default class App extends Component {
   }
 
   onMessage = (e) => {
+    console.log(e.nativeEvent);
     if (e.nativeEvent.data === 'ShowCamera') this.showCamera();
   };
 
@@ -30,10 +31,10 @@ export default class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <WebView onMessage={this.onMessage} webviewRef={this.webviewRef} />
         {this.state.cameraView ? (
           <CameraView onPress={this.onPressCapture} cameraRef={this.cameraRef} />
         ) : null}
+        <WebView onMessage={this.onMessage} webviewRef={this.webviewRef} />
       </View>
     );
   }

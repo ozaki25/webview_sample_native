@@ -5,7 +5,7 @@ import Button from './Button';
 
 const styles = StyleSheet.create({
   camera: {
-    flex: 10,
+    flex: 1,
   },
   buttonContainer: {
     flex: 1,
