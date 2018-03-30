@@ -24,7 +24,7 @@ https://github.com/ozaki25/webview_sample_native/blob/postmessage_and_submit/src
 - 下半分はpost失敗のエラー画面
   - post先用意するのが面倒だった
   - エラーがでているということはpostできているということ
-    - 画面には`cannot post /`って書いてある
+    - 画面には`cannot post /`って書いてある
 
 ![submit](https://user-images.githubusercontent.com/10087419/38121766-3da68bfc-340c-11e8-9e65-1c3e6d10abe3.gif)
 
